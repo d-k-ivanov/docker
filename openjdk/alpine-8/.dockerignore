@@ -1,0 +1,5 @@
+.dockerignore
+Dockerfile
+build.ps1
+build.sh
+version
