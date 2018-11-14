@@ -1,0 +1,9 @@
+.dockerignore
+.editorconfig
+.gitattributes
+.gitignore
+Dockerfile
+README.md
+build.ps1
+build.sh
+version
