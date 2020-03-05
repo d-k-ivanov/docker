@@ -5,7 +5,7 @@ LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
 RUN set -eux; \
 	apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update; \
 	apt-get install -y --no-install-recommends \
-# utilities for keeping Debian and OpenJDK CA certificates in sync
+        # utilities for keeping Debian and OpenJDK CA certificates in sync
 		ca-certificates p11-kit \
 	; \
 	rm -rf /var/lib/apt/lists/*
