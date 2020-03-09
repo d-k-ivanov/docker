@@ -103,6 +103,6 @@ RUN set -eux; \
 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
 
-EXPOSE 8090
+EXPOSE 8090-8190
 ENTRYPOINT ["/opt/browsermob-proxy/bin/browsermob-proxy"]
 CMD ["--port", "8090"]
