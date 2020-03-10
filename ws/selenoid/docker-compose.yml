@@ -1,0 +1,38 @@
+version: '3'
+services:
+  selenoid:
+    container_name: selenoid
+    image: aerokube/selenoid:1.10.0
+    restart: always
+    env_file:
+      - .env
+    environment:
+      COMPOSE_CONVERT_WINDOWS_PATHS: "true"
+      # Add to .env PROJECT_PATH_UNIX_STYLE=/c/path/to/current/repo
+      OVERRIDE_VIDEO_OUTPUT_DIR: "${PROJECT_PATH_UNIX_STYLE}/.docker/video"
+    volumes:
+      - ./.docker/browsers.json:/etc/selenoid/browsers.json
+      - ./.docker/logs:/opt/selenoid/logs:rw
+      - ./.docker/video:/opt/selenoid/video:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: bridge
+    ports:
+      - 4444:4444
+  selenoid-ui:
+    container_name: selenoid-ui
+    command: ["--selenoid-uri", "http://selenoid:4444"]
+    image: aerokube/selenoid-ui:1.9.2
+    restart: always
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - 8080:8080
+  browsermob-proxy:
+    container_name: browsermob-proxy
+    command: --port 8090
+    image: keepbot/browsermob-proxy-py:2.1.4
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8090-8190:8090-8190
