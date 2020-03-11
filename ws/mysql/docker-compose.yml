@@ -1,17 +1,17 @@
 version: '3'
 services:
-  flyway:
-    container_name: dev_flyway
-    image: flyway/flyway
-    command: -url=jdbc:mysql://mysql_db -schemas=dbname -user=root -password=password -connectRetries=60 migrate
-    volumes:
-      - ./.flyway:/flyway/sql
-    depends_on:
-      - db
-    networks:
-      main:
-        aliases:
-          - flyway
+#   flyway:
+#     container_name: dev_flyway
+#     image: flyway/flyway
+#     command: -url=jdbc:mysql://mysql_db -schemas=dbname -user=root -password=password -connectRetries=60 migrate
+#     volumes:
+#       - ./.flyway:/flyway/sql
+#     depends_on:
+#       - mysql_db
+#     networks:
+#       main:
+#         aliases:
+#           - flyway
   mysql_db:
     container_name: dev_mysql_db
     image: mysql:5.7
