@@ -2,17 +2,17 @@ FROM jupyter/minimal-notebook
 
 LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
 
+USER $NB_UID
+WORKDIR $HOME
 
 RUN set -x                                                                                          \
-    && echo "------------------------------ Soft  -----------------------------" > /dev/null        \
+    && echo "------------------------ Installing Software ---------------------" > /dev/null        \
     && conda install --quiet --yes xeus-cling -c conda-forge                                        \
-    && conda install -c conda-forge xtensor
-
-# RUN set -x                                                                                          \
-#     && echo "------------------------------ Users ------------------------------" > /dev/null       \
-#     && find / -path /proc -prune -o -group 1000 -exec chgrp -h bamboo {} \;                         \
-#     && find / -path /proc -prune -o -user 1000 -exec chown -h bamboo {} \;
-
-# RUN set -x                                                                                          \
-#     && echo "------------------------------ Clean ------------------------------" > /dev/null       \
-#     && apt-get clean
+    && conda install -c conda-forge xtensor xtensor-blas                                            \
+    && conda update --all --quiet --yes                                                             \
+    && echo "------------------------------ Cleaning ---------------------------" > /dev/null       \
+    && conda clean --all -f -y                                                                      \
+    && rm -rf /home/$NB_USER/.cache/yarn                                                            \
+    && echo "------------------------- Fixing permissions ----------------------" > /dev/null       \
+    && fix-permissions $CONDA_DIR                                                                   \
+    && fix-permissions /home/$NB_USER
