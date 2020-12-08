@@ -22,7 +22,8 @@ RUN set -eux                                            \
     && dnf -y install openssl-devel                     \
     && dnf -y install libcurl-devel                     \
     && dnf -y install wget                              \
-    && dnf -y clean all
+    && dnf -y clean all                                 \
+    && rm -rf /var/cache/dnf
 
 ENV MRO_VERSION 4.0.2
 ENV R_HOME=/opt/microsoft/ropen/$MRO_VERSION/lib64/R
