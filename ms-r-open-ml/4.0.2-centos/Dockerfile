@@ -40,7 +40,7 @@ RUN set -eux                                            \
 RUN set -eux                                            \
     && echo 'options("download.file.method" = "libcurl")' >> /opt/microsoft/ropen/$MRO_VERSION/lib64/R/etc/Rprofile.site
 
-RUN Rscript -e 'install.packages(c("devtools", "curl", "Rcpp", "rjson", "dplyr", "data.table", "openxlsx", "codetools"))'
+RUN Rscript -e 'install.packages(c("devtools", "curl", "Rcpp", "RInside", "rjson", "dplyr", "data.table", "openxlsx", "codetools"))'
 
 CMD ["/usr/bin/R", "--no-save"]
 # CMD ["/usr/bin/RScript", "--no-save"]
