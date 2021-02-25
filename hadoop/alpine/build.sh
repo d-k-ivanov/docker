@@ -4,4 +4,4 @@ DIST=$(head -2 version | tail -1)
 docker build \
   --rm \
   --build-arg HADOOP_VERSION=${JAVA_VERSION} \
-  --tag keepbot/hadoop:${HADOOP_VERSION}-${DIST} .
+  --tag dkivanov/hadoop:${HADOOP_VERSION}-${DIST} .

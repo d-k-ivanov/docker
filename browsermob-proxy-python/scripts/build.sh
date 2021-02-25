@@ -3,4 +3,4 @@ BUILDPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 VERSION=$(head -1 version)
 docker build \
   --rm \
-  --tag keepbot/browsermob-proxy-py:${VERSION} ${BUILDPATH}
+  --tag dkivanov/browsermob-proxy-py:${VERSION} ${BUILDPATH}

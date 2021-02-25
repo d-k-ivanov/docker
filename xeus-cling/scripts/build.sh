@@ -3,4 +3,4 @@ BUILDPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 VERSION=$(head -1 version)
 docker build \
   --rm \
-  --tag keepbot/xeus-cling:${VERSION} ${BUILDPATH}
+  --tag dkivanov/xeus-cling:${VERSION} ${BUILDPATH}

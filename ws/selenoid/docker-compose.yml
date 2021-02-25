@@ -31,7 +31,7 @@ services:
   browsermob-proxy:
     container_name: browsermob-proxy
     command: --port 8090
-    image: keepbot/browsermob-proxy-py:2.1.4
+    image: dkivanov/browsermob-proxy-py:2.1.4
     restart: always
     network_mode: bridge
     ports:

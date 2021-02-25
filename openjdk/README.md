@@ -2,7 +2,7 @@
 
 ### Use
 ```
-docker pull keepbot/jdk:<version>
+docker pull dkivanov/jdk:<version>
 ```
 
 ### Versions
@@ -20,7 +20,7 @@ docker build \
   --rm \
   --build-arg JAVA_VERSION=${JAVA_VERSION} \
   --build-arg JAVA_ALPINE_VERSION=$JAVA_ALPINE_VERSION \
-  --tag keepbot/jdk:$JAVA_VERSION-alpine .
+  --tag dkivanov/jdk:$JAVA_VERSION-alpine .
 
 ```
 
@@ -32,5 +32,5 @@ docker build `
   --rm `
   --build-arg JAVA_VERSION=$JAVA_VERSION `
   --build-arg JAVA_ALPINE_VERSION=$JAVA_ALPINE_VERSION `
-  --tag keepbot/jdk:$JAVA_VERSION-alpine .
+  --tag dkivanov/jdk:$JAVA_VERSION-alpine .
 ```

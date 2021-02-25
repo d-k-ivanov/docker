@@ -6,4 +6,4 @@ docker build `
   --rm `
   --build-arg JAVA_VERSION=$JAVA_VERSION `
   --build-arg JAVA_ALPINE_VERSION=$JAVA_ALPINE_VERSION `
-  --tag keepbot/jdk:$JAVA_VERSION-$DIST .
+  --tag dkivanov/jdk:$JAVA_VERSION-$DIST .
