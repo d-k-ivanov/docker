@@ -5,8 +5,8 @@ LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
 
 COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
 RUN set -eux                    \
-    && emerge-webrsync          \
-    && emerge --sync            \
+    # && emerge-webrsync          \
+    # && emerge --sync            \
     && emerge -qv               \
         dev-vcs/git             \
         dev-lang/python
