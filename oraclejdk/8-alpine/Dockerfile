@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 # Comment following line if you want to use wget to install JDK
 ADD jdk-8u172-linux-x64.tar.gz /opt/java/

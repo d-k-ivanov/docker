@@ -1,7 +1,7 @@
 FROM gentoo/portage:20210225 as portage
 FROM gentoo/stage3:20210225
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
 RUN set -eux                    \

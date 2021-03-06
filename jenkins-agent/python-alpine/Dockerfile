@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 ENV HOME /home/jenkins
 ENV JENKINS_HOME /home/jenkins

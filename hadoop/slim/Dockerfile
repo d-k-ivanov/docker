@@ -1,6 +1,6 @@
 FROM openjdk:10-jdk-slim
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 ARG HADOOP_VERSION
 

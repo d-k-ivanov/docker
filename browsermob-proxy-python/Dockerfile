@@ -1,6 +1,6 @@
 FROM python:3-slim
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 RUN set -eux; \
 	apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update; \

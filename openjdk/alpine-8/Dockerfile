@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 ARG JAVA_VERSION
 ARG JAVA_ALPINE_VERSION

@@ -1,6 +1,6 @@
 FROM dkivanov/jdk:11-alpine
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 ARG HADOOP_VERSION
 

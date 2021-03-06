@@ -1,6 +1,6 @@
 FROM jupyter/minimal-notebook
 
-LABEL maintainer="Dmitriy Ivanov <d.k.ivanov@live.com>"
+LABEL maintainer="Dmitry Ivanov <d.k.ivanov@live.com>"
 
 USER $NB_UID
 WORKDIR $HOME
