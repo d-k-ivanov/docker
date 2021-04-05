@@ -1,3 +1,14 @@
+# fks pagila film
+# fks pagila rental
+
+# One way to look at a database's structure is as a graph of foreign key relationships among tables.
+# Two styles of visual representation predominate: models or entity-relationship diagrams (ERDs) created
+# as part of requirements negotiation and design, and descriptive diagrams of an extant database.
+# The former are drawn by hand on a whiteboard or in diagramming software; the latter are often generated
+# by database management tools with some manual cleanup and organization. Both styles usually take the
+# complete database as their object, and whether descriptive or prescriptive, their role in the software
+# development process is as reference material, or documentation.
+
 function fks() {
   if [ -z "$1" ]; then
     echo "Syntax: fks dbname [schemaname.][tablename]"
